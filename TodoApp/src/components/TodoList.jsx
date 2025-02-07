@@ -1,18 +1,25 @@
 import React from 'react';
 
-const TodoList = ({ todos, toggleTodo }) => (
-  <ul>
-    {todos.map((todo, index) => (
-      <li className='todo' key={index} style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
-        <input
-          type="checkbox"
-          checked={todo.completed}
-          onChange={() => toggleTodo(index)}
-        />
-        {todo.text}
-      </li>
-    ))}
-  </ul>
-);
+const TodoList = ({ todos, toggleTodo, removeTodo }) => {
+  return (
+    <div className='todo-list'>
+      {todos.map((todo, index) => (
+        <div className={`todo ${todo.completed ? 'completed' : ''}`} key={index}>
+          <span>{todo.text} - {new Date(todo.dueDate).toLocaleDateString()}</span>
+          <div>
+            <input
+              type="checkbox"
+              checked={todo.completed}
+              onChange={() => toggleTodo(index)}
+            />
+            <button onClick={() => removeTodo(index)} className="remove-todo-btn">
+              &#10006;
+            </button>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
 
 export default TodoList;

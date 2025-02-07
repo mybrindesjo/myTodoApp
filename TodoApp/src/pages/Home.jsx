@@ -4,8 +4,9 @@ function Home() {
     return (
         <main>
             <section className="text-container">
-                <h1>Välkommen</h1>
-                <p>Detta är en enkel todo-app som du kan använda för att skapa en lista över saker du behöver göra.</p>
+                <h1>Välkommen till MyTodoApp</h1>
+                <p>Organisera ditt liv med stil! Skapa och hantera dina uppgifter enkelt och effektivt.</p>
+                <button className="get-started-btn">Kom igång</button>
             </section>
         </main>
     );

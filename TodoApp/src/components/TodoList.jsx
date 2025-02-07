@@ -1,0 +1,18 @@
+import React from 'react';
+
+const TodoList = ({ todos, toggleTodo }) => (
+  <ul>
+    {todos.map((todo, index) => (
+      <li key={index} style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
+        <input
+          type="checkbox"
+          checked={todo.completed}
+          onChange={() => toggleTodo(index)}
+        />
+        {todo.text}
+      </li>
+    ))}
+  </ul>
+);
+
+export default TodoList;

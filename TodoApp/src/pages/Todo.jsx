@@ -5,8 +5,8 @@ import TodoList from '../components/TodoList';
 const Todo = () => {
   const [todos, setTodos] = useState([]);
 
-  const addTodo = (text, dueDate) => {
-    const newTodos = [...todos, { text, dueDate, completed: false }];
+  const addTodo = (text) => {
+    const newTodos = [...todos, { text, completed: false }];
     setTodos(newTodos);
   };
 

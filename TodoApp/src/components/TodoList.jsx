@@ -5,7 +5,7 @@ const TodoList = ({ todos, toggleTodo, removeTodo }) => {
     <div className='todo-list'>
       {todos.map((todo, index) => (
         <div className={`todo ${todo.completed ? 'completed' : ''}`} key={index}>
-          <span>{todo.text} - {new Date(todo.dueDate).toLocaleDateString()}</span>
+          <span>{todo.text}</span>
           <div>
             <input
               type="checkbox"

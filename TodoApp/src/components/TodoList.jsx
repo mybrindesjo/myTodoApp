@@ -6,7 +6,7 @@ const TodoList = ({ todos, toggleTodo, removeTodo }) => {
       {todos.map((todo, index) => (
         <div className={`todo ${todo.completed ? 'completed' : ''}`} key={index}>
           <span>{todo.text}</span>
-          <div>
+          <div className='todo-actions'>
             <input
               type="checkbox"
               checked={todo.completed}

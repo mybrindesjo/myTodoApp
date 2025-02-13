@@ -2,23 +2,18 @@ import React from 'react';
 
 const TodoList = ({ todos, toggleTodo, removeTodo }) => {
   return (
-    <div className='todo-list'>
+    <ul className="todo-list">
       {todos.map((todo, index) => (
-        <div className={`todo ${todo.completed ? 'completed' : ''}`} key={index}>
+        <li
+          key={index}
+          className={`todo-item ${todo.completed ? 'completed' : ''}`}
+          onClick={() => toggleTodo(index)}
+        >
           <span>{todo.text}</span>
-          <div className='todo-actions'>
-            <input
-              type="checkbox"
-              checked={todo.completed}
-              onChange={() => toggleTodo(index)}
-            />
-            <button onClick={() => removeTodo(index)} className="remove-todo-btn">
-              &#10006;
-            </button>
-          </div>
-        </div>
+          <button onClick={(e) => { e.stopPropagation(); removeTodo(index); }}>Remove</button>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 };
 

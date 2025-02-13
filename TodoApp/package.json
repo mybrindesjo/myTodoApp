@@ -12,6 +12,7 @@
   "dependencies": {
     "react": "^19.0.0",
     "react-calendar": "^5.1.0",
+    "react-confetti": "^6.2.2",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.1.5",
     "router-dom": "^3.0.1"

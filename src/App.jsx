@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import Info from './pages/Info';
 import Todo from './pages/Todo';
+import Home from './pages/Home';
 
 import './index.css';
 
 function App() {
-    const [date, setDate] = useState(new Date());
-
     return (
         <Router>
             <Navbar />
@@ -17,6 +16,7 @@ function App() {
                     <Route path="/" element={<Todo />} />
                     <Route path="/info" element={<Info />} />
                     <Route path="/todo" element={<Todo />} />
+                    <Route path="/home" element={<Home />} />
                 </Routes>
             <Footer />
         </Router>

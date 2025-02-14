@@ -33,13 +33,16 @@ const Todo = () => {
     setTodos(newTodos);
   };
 
+
   return (
     <>
       {allCompleted && <Confetti />}
       <section className="text-container">
         <h1>Todo-lista</h1>
         <p>Här kan du skapa en lista över saker du behöver göra.</p>
-        <Input addTodo={addTodo} />
+        <div className="input-container">
+          <Input addTodo={addTodo} setTodos={setTodos} />
+        </div>
         <TodoList todos={todos} toggleTodo={toggleTodo} removeTodo={removeTodo} />
         {allCompleted && <p className="congrats-message">Du är klar, bra kämpat!</p>}
       </section>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Input = ({ addTodo }) => {
+const Input = ({ addTodo, setTodos }) => {
   const [value, setValue] = useState('');
 
   const handleSubmit = (e) => {
@@ -8,6 +8,10 @@ const Input = ({ addTodo }) => {
     if (!value) return;
     addTodo(value);
     setValue('');
+  };
+
+  const clearTodos = () => {
+    setTodos([]);
   };
 
   return (
@@ -18,7 +22,8 @@ const Input = ({ addTodo }) => {
         onChange={(e) => setValue(e.target.value)}
         placeholder="Lägg till en ny todo"
       />
-      <button type="submit">Lägg till</button>
+      <button className="add-button">Lägg till</button>
+      <button onClick={clearTodos} className="clear-button">Ta bort alla</button>
     </form>
   );
 };

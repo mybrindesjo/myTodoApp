@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <>
         <footer className='footer'>
-            <p>© 2021 Todo App</p>
+            <p>© 2025 Todo App</p>
         </footer>
     </>
   )

@@ -10,7 +10,7 @@ const TodoList = ({ todos, toggleTodo, removeTodo }) => {
           onClick={() => toggleTodo(index)}
         >
           <span>{todo.text}</span>
-          <button onClick={(e) => { e.stopPropagation(); removeTodo(index); }}>Remove</button>
+          <button className='clear-button' onClick={(e) => { e.stopPropagation(); removeTodo(index); }}>✖️</button>
         </li>
       ))}
     </ul>

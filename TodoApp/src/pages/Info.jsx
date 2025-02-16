@@ -10,6 +10,7 @@ const Info = () => {
           <li>För att markera en uppgift som klar, klicka på uppgiften. Den kommer att strykas över.</li>
           <li>För att ta bort en uppgift, klicka på krysset bredvid uppgiften.</li>
           <li>När alla uppgifter är klara, kommer en konfetti-animation att visas och ett meddelande "Du är klar, bra kämpat!" kommer att visas.</li>
+          <li>För att återställa alla uppgifter, klicka på "Ta bort alla".</li>
         </ul>
       <p>Vi hoppas att denna applikation hjälper dig att hålla dig organiserad och produktiv. Lycka till!</p>
     </section>

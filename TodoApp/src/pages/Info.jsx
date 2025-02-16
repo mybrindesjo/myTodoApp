@@ -12,7 +12,7 @@ const Info = () => {
           <li>När alla uppgifter är klara, kommer en konfetti-animation att visas och ett meddelande "Du är klar, bra kämpat!" kommer att visas.</li>
           <li>För att återställa alla uppgifter, klicka på "Ta bort alla".</li>
         </ul>
-      <p>Vi hoppas att denna applikation hjälper dig att hålla dig organiserad och produktiv. Lycka till!</p>
+      <p>Hoppas att denna applikation hjälper dig att hålla dig organiserad och produktiv. Lycka till!</p>
     </section>
   );
 };

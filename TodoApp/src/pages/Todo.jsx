@@ -33,7 +33,6 @@ const Todo = () => {
     setTodos(newTodos);
   };
 
-
   return (
     <>
       {allCompleted && <Confetti />}
